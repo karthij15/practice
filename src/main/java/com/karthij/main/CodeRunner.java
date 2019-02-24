@@ -10,7 +10,7 @@ public class CodeRunner
     {
         Scanner scannerObj = new Scanner(System.in);
         System.out.println("Enter the class name: ");
-        String className = scannerObj.nextLine();
+        String className = /*scannerObj.nextLine();*/ "com.karthij.ds.string.IsStringRotation";
 
         Class.forName(className).newInstance();
         scannerObj.close();
