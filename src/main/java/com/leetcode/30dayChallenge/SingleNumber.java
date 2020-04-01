@@ -17,13 +17,13 @@ Output: 4
 
 class Solution {
     public int singleNumber(int[] nums) {
-        int i = 0;
-        int temp = 0;
+
+        int i = 1;
         while(i < nums.length) {
-            temp = temp^nums[i];
+            nums[0] = nums[0]^nums[i];
             i++;
         }
         
-        return temp;
+        return nums[0];
     }
 }
