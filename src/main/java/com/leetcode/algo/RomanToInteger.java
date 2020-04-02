@@ -43,6 +43,7 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 */
 
+//careful with 'IV', 'IX' - use the index of the character to add or subtract
 class Solution {
     public int romanToInt(String s) {
         
