@@ -34,8 +34,13 @@ class Solution {
         
         do {
             slow = squareOfSum(slow);
+            /*
             fast = squareOfSum(fast);
-            fast = squareOfSum(fast);
+            fast = squareOfSum(fast);*/
+            fast = squareOfSum(squareOfSum(fast));
+            /*
+            you can check fast == 1 and return true here itself. which avoids the slow to come up with the fast value.
+            */
         } while(slow != fast);
         return slow == 1;
     }
