@@ -40,7 +40,7 @@ Do not return anything from your function.
  */
 class Solution {
     public void deleteNode(ListNode node) {
-
+/*
         ListNode i = node;
         ListNode temp = node;
 
@@ -54,7 +54,9 @@ class Solution {
         }
         
         
-        temp.next = null;
+        temp.next = null; */
+        node.val = node.next.val;
+        node.next = node.next.next;
         
     }
 }
