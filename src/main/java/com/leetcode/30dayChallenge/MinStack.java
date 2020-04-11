@@ -7,41 +7,102 @@ top() -- Get the top element.
 getMin() -- Retrieve the minimum element in the stack.
 */
 
+import java.util.*;
+
+public class MinStack {
+
+    public static void main(String...args) {
+        MinStackNode obj = new MinStackNode();
+       // System.out.println(obj.getMin());
+
+        System.out.println(obj.push(2147483646));
+        System.out.println(obj.push(2147483646));
+        System.out.println(obj.push(2147483647));
+        System.out.println(obj.top());
+        System.out.println(obj.pop());
+        System.out.println(obj.getMin());
+        System.out.println(obj.pop());
+        System.out.println(obj.getMin());
+        System.out.println(obj.pop());
+        System.out.println(obj.push(2147483647));
+        System.out.println(obj.top());
+        System.out.println(obj.getMin());
+        System.out.println(obj.push(-2147483648));
+        System.out.println(obj.top());
+        System.out.println(obj.getMin());
+        System.out.println(obj.pop());
+        System.out.println(obj.getMin());
+    }
+}
+
+//Based on the online solutions
+class MinStackNode {
+    private Node head;
+
+    public String push(int x) {
+        if(head == null)
+            head = new Node(x, x, null);
+        else
+            head = new Node(x, Math.min(x, head.min), head);
+        return null;
+    }
+
+    public String pop() {
+        head = head.next;
+        return null;
+    }
+
+    public int top() {
+        return head.val;
+    }
+
+    public int getMin() {
+        return head.min;
+    }
+
+    private class Node {
+        int val;
+        int min;
+        Node next;
+
+        private Node(int val, int min, Node next) {
+            this.val = val;
+            this.min = min;
+            this.next = next;
+        }
+    }
+}
+
 class MinStackUsingList {
 
     LinkedList<Integer> list = new LinkedList<>();
     int min = Integer.MAX_VALUE;
-    
+
     /** initialize your data structure here. */
-    public MinStack() {
-        
+    public MinStackUsingList() {
+
     }
-    
-    public void push(int x) {
-        System.out.println("push: " + x);
-        min = (x < min) ? x : min;
+
+    public String push(int x) {
+        min = Math.min(x, min);
         list.add(x);
+        return null;
     }
-    
-    public void pop() {
+
+    public String pop() {
         int rem = list.removeLast();
-        System.out.println("pop: " + rem + " : min : " + min);
-        System.out.println(" List: " + list.size());
-        if(rem == min) {
-            if(list.size() > 0) {
+        if(rem == min && list.size() > 0) {
                 LinkedList<Integer> temp = (LinkedList<Integer>) list.clone();
-                System.out.println(" Temp: " + temp.size());
                 Collections.sort(temp);
                 min = temp.get(0);
-            } else
-                min = Integer.MAX_VALUE;
         }
+        return null;
     }
-    
+
     public int top() {
         return list.get(list.size() - 1);
     }
-    
+
     public int getMin() {
         return min;
     }
