@@ -91,6 +91,10 @@ class MinStackUsingList {
 
     public String pop() {
         int rem = list.removeLast();
+        /*
+        instead of sorting, introduce priority queue for storing min. it will sort it self
+        https://stackoverflow.com/questions/25569625/sorting-priority-queue-in-java
+        */
         if(rem == min && list.size() > 0) {
                 LinkedList<Integer> temp = (LinkedList<Integer>) list.clone();
                 Collections.sort(temp);
