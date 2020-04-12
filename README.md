@@ -1,2 +1,4 @@
 # practice
-understanding data structures
+
+## solving some problems based on algorithm, data structures and concurrency
+
