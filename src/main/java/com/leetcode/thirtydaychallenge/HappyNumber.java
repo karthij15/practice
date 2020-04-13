@@ -1,3 +1,4 @@
+package com.leetcode.thirtydaychallenge;
 /*
 Write an algorithm to determine if a number is "happy".
 
@@ -25,7 +26,7 @@ https://medium.com/@monisha.mary.mathew/happy-number-e31f869cee70
 */
 
 
-class Solution {
+class HappyNumber {
 
     public boolean isHappy(int n) {
         

@@ -1,3 +1,5 @@
+package com.leetcode.thirtydaychallenge;
+
 /*
 Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 
@@ -27,8 +29,8 @@ MaxEndingHere is either A[i] plus the previous MaxEndingHere, or just A[i], whic
 
 */
 
-class Solution {
-    public int maxSubArray(int[] nums) {
+class MaxSubArray {
+    public int solution(int[] nums) {
         /*
         int max = Integer.MIN_VALUE;
         

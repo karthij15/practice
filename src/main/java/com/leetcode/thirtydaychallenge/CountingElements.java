@@ -1,3 +1,4 @@
+package com.leetcode.thirtydaychallenge;
 /*
 
 Given an integer array arr, count element x such that x + 1 is also in arr.
@@ -34,8 +35,10 @@ Constraints:
 0 <= arr[i] <= 1000
 */
 
-class Solution {
-    public int countElements(int[] arr) {
+import java.util.HashSet;
+
+class CountingElements {
+    public int solution(int[] arr) {
         HashSet<Integer> set = new HashSet<>();
         for(int a : arr) {
             set.add(a);

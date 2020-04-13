@@ -26,7 +26,8 @@ public class TwoSum {
       }
       numsMap.put(nums[i], i);
     }
-    return null;
+
+    return new int[] {};
 
   }
 }

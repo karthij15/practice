@@ -1,3 +1,4 @@
+package com.leetcode.thirtydaychallenge;
 /*
 Given a non-empty array of integers, every element appears twice except for one. Find that single one.
 
@@ -15,8 +16,8 @@ Input: [4,1,2,1,2]
 Output: 4
 */
 
-class Solution {
-    public int singleNumber(int[] nums) {
+class SingleNumber {
+    public int solution(int[] nums) {
 
         int i = 1;
         while(i < nums.length) {

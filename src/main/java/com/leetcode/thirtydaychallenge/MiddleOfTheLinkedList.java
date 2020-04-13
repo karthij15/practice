@@ -1,3 +1,4 @@
+package com.leetcode.thirtydaychallenge;
 /*
 Given a non-empty, singly linked list with head node head, return a middle node of linked list.
 
@@ -24,14 +25,14 @@ Note:
 The number of nodes in the given list will be between 1 and 100.
 */
 
-public class ListNode {
+class ListNode {
       int val;
       ListNode next;
       ListNode(int x) { val = x; }
  }
  
-class Solution {
-    public ListNode middleNode(ListNode head) {
+class MiddleOfTheLinkedList {
+    public ListNode solution(ListNode head) {
 
         ListNode fast = head;
         

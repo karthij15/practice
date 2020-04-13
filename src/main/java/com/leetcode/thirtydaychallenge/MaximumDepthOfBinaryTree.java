@@ -1,3 +1,4 @@
+package com.leetcode.thirtydaychallenge;
 /*
 Given a binary tree, find its maximum depth.
 
@@ -25,7 +26,7 @@ return its depth = 3
  *     TreeNode(int x) { val = x; }
  * }
  */
-class Solution {
+class MaximumDepthOfBinaryTree {
     public int maxDepth(TreeNode root) {
         if(root == null)
             return 0;

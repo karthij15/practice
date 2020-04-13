@@ -1,3 +1,7 @@
+package com.leetcode.linkedlist;
+
+import java.util.Stack;
+
 /*
 Reverse a singly linked list.
 
@@ -12,14 +16,8 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 
 //Based On: https://medium.com/@jimdaosui/reverse-linked-list-ca8be5651326
 
-public class ListNode {
-     int val;
-     ListNode next;
-     ListNode(int x) { val = x; }
- }
- 
-class Solution {
-    public ListNode reverseList(ListNode head) {
+class ReverseLinkedList {
+    public ListNode solution(ListNode head) {
         return reverseListUsingRecursion(head);
     }
     
@@ -52,7 +50,8 @@ class Solution {
     }
     
     public ListNode reverseListUsingStack(ListNode head) {
-        Stack<ListNode> stack = new Stack<>();
+       //Replace the synchronized class "Stack" by an unsynchronized one such as "Deque" 
+       Stack<ListNode> stack = new Stack<>();
         
         while(head != null) {
             stack.push(new ListNode(head.val));

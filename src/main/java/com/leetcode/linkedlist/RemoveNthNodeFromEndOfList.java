@@ -1,3 +1,8 @@
+package com.leetcode.linkedlist;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 Given a linked list, remove the n-th node from the end of list and return its head.
 
@@ -23,14 +28,9 @@ Could you do this in one pass?
  *     ListNode(int x) { val = x; }
  * }
  */
- 
- public class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) { val = x; }
- }
-class Solution {
-    public ListNode removeNthFromEnd(ListNode head, int n) {
+class RemoveNthNodeFromEndOfList {
+
+    public ListNode solution(ListNode head, int n) {
         
         //find other alternate way
         return usingList(head, n);
@@ -48,7 +48,7 @@ class Solution {
         int l = (list.size() - n);
         list.remove(l);
 
-        if(list.size() > 0) {
+        if(!list.isEmpty()) {
             int i = 0;
             for (ListNode a : list) {
                 if (i < list.size() - 1)
@@ -57,7 +57,7 @@ class Solution {
                     a.next = null;
             }
         }
-        return list.size() > 0 ? list.get(0) : null;
+        return !list.isEmpty() ? list.get(0) : null;
     }
 }
 

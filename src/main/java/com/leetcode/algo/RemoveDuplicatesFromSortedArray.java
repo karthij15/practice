@@ -1,3 +1,5 @@
+package com.leetcode.algo;
+
 /*
 Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 
@@ -35,8 +37,8 @@ for (int i = 0; i < len; i++) {
 }
 */
 
-class Solution {
-    public int removeDuplicates(int[] nums) {
+class RemoveDuplicatesFromSortedArray {
+    public int solution(int[] nums) {
         if(nums == null || nums.length == 0)
             return 0;
         

@@ -1,3 +1,5 @@
+package com.leetcode.algo;
+
 /*
 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
@@ -45,8 +47,8 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 //in roman only three same letters together in a row
 
-class Solution {
-    public String intToRoman(int num) {
+class IntegerToRoman {
+    public String solution(int num) {
         
        // int num = 1888;//which is a year having highest roman number 
 
@@ -55,9 +57,8 @@ class Solution {
         String X[] = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
         String I[] = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
 
-        System.out.println("indexes: " + ((num/1000) + " : " + ((num%1000)/100) + " : " +  ((num%100)/10) + " : " +  (num%10)));
+        //System.out.println("indexes: " + ((num/1000) + " : " + ((num%1000)/100) + " : " +  ((num%100)/10) + " : " +  (num%10)));
 
-        String s =  M[num/1000] + C[(num%1000)/100] + X[(num%100)/10] + I[num%10];
-       return s;
+       return M[num/1000] + C[(num%1000)/100] + X[(num%100)/10] + I[num%10];
     }
 }

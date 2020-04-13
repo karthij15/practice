@@ -1,3 +1,7 @@
+package com.leetcode.thirtydaychallenge;
+
+import java.util.Stack;
+
 /*
 Given two strings S and T, return if they are equal when both are typed into empty text editors. # means a backspace character.
 
@@ -31,13 +35,13 @@ Follow up:
 Can you solve it in O(N) time and O(1) space?
 */
 
-class Solution {
-    public boolean backspaceCompare(String S, String T) {
+class BackspaceStringCompare {
+    public boolean solution(String S, String T) {
         return validOne(S).equals(validOne(T));        
     }
     
     String validOne(String s) {
-        Stack<Character> a = new Stack();
+        Stack<Character> a = new Stack<>();
 
         for (char c: s.toCharArray()) {
             if (c != '#')

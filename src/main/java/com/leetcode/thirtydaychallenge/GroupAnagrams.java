@@ -1,3 +1,4 @@
+package com.leetcode.thirtydaychallenge;
 /*
 Given an array of strings, group anagrams together.
 
@@ -16,8 +17,13 @@ All inputs will be in lowercase.
 The order of your output does not matter.
 */
 
-class Solution {
-    public List<List<String>> groupAnagrams(String[] strs) {
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+class GroupAnagrams {
+    public List<List<String>> solution(String[] strs) {
         
         Map<String, List<String>> map = new HashMap<>();
         

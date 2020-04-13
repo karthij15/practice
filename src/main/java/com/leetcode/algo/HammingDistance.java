@@ -1,3 +1,5 @@
+package com.leetcode.algo;
+
 /*
 The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
 
@@ -22,7 +24,7 @@ The above arrows point to positions where the corresponding bits are different.
 
 //Based on: https://medium.com/@vojtastavik/hamming-distance-programming-interview-problem-i-b2b3322a268f
 
-class Solution {
+class HammingDistance {
     public int hammingDistance(int x, int y) {
         
         int d = x ^ y;

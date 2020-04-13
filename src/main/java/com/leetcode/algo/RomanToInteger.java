@@ -1,3 +1,8 @@
+package com.leetcode.algo;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /*
 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
@@ -44,8 +49,8 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 */
 
 //careful with 'IV', 'IX' - use the index of the character to add or subtract
-class Solution {
-    public int romanToInt(String s) {
+class RomanToInteger {
+    public int solution(String s) {
         
         Map<Character, Integer> map = new HashMap<>();
 
