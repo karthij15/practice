@@ -59,6 +59,10 @@ class PerformStringShifts {
         }
         
         sh = shiftArr[1] - shiftArr[0];
+     
+        if(sh == 0)
+         return s;
+     
         boolean isLS = sh < 0;
         
         if(isLS)
