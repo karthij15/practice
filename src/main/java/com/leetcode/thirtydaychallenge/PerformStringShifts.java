@@ -44,13 +44,21 @@ class PerformStringShifts {
         
         int sh = 0;
         
+     /*
         for (int i = 0; i < shift.length; i++) {
             if(shift[i][0] == 0)
                 sh -= shift[i][1];
             else
                 sh += shift[i][1];
         }
+        */
+        int[] shiftArr = new int[2];
         
+        for (int i = 0; i < shift.length; i++) {
+            shiftArr[shift[i][0]] += shift[i][1];
+        }
+        
+        sh = shiftArr[1] - shiftArr[0];
         boolean isLS = sh < 0;
         
         if(isLS)
