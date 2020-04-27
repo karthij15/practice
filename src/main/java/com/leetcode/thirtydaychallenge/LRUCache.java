@@ -25,33 +25,25 @@ cache.get(1);       // returns -1 (not found)
 cache.get(3);       // returns 3
 cache.get(4);       // returns 4
 */
+class LRUCache extends  LinkedHashMap {
 
-class LRUCache {
+    int MAX_SIZE = 0;
 
-    LinkedHashMap<Integer, Integer> map = new LinkedHashMap<>();
-    int MAX_SIZE= 0;
-    
+    protected boolean removeEldestEntry(Map.Entry entry) {
+        return size() > MAX_SIZE;
+    }
+
     public LRUCache(int capacity) {
+        super(capacity, 0.75f, true/* accessorder*/); //- without this constructor order wont happen, default accessorder is false;
         MAX_SIZE= capacity;
     }
-    
-    public int get(int key) {
-        int toRet = -1;
 
-        if(map.containsKey(key)) {
-            toRet = map.remove(key);
-            map.put(key, toRet);
-        }
-        
-        return toRet;
+    public int get(int key) {
+        return (Integer)getOrDefault(key, -1);
     }
-    
+
     public void put(int key, int value) {
-        if(map.containsKey(key))
-            map.remove(key);
-        else if(map.size() == MAX_SIZE)
-            map.remove(map.keySet().iterator().next());
-        map.put(key, value);
+        super.put(key, value);
     }
 }
 
