@@ -42,6 +42,7 @@ Output: 42
  *     }
  * }
  */
+//Logic inspired from youtuber Errichto
 class BinaryTreeMaximumPathSum {
    
     int sum = Integer.MIN_VALUE;
