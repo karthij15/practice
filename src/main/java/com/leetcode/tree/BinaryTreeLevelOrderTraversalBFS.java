@@ -1,5 +1,7 @@
 package com.leetcode.tree;
 
+import java.util.*;
+
 /*
 Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
 
@@ -27,6 +29,14 @@ return its level order traversal as:
  *     TreeNode(int x) { val = x; }
  * }
  */
+
+class TreeNode {
+     int val;
+     TreeNode left;
+     TreeNode right;
+     TreeNode(int x) { val = x; }
+}
+
 class BinaryTreeLevelOrderTraversalBFS {
     public List<List<Integer>> solution(TreeNode root) {
         

@@ -1,5 +1,8 @@
 package com.leetcode.thirtydaychallenge;
 
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+
 /*
 You have a queue of integers, you need to retrieve the first unique integer in the queue.
 

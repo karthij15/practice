@@ -1,5 +1,8 @@
 package com.leetcode.thirtydaychallenge;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 /*
 Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
 
@@ -13,7 +16,7 @@ Could you do both operations in O(1) time complexity?
 
 Example:
 
-LRUCache cache = new LRUCache( 2 /* capacity */ );
+LRUCache cache = new LRUCache( 2 capacity  );//
 
 cache.put(1, 1);
 cache.put(2, 2);
@@ -25,11 +28,11 @@ cache.get(1);       // returns -1 (not found)
 cache.get(3);       // returns 3
 cache.get(4);       // returns 4
 */
-class LRUCache extends  LinkedHashMap {
+class LRUCache extends  LinkedHashMap<Integer, Integer> {
 
     int MAX_SIZE = 0;
 
-    protected boolean removeEldestEntry(Map.Entry entry) {
+    protected boolean removeEldestEntry(Map.Entry<Integer, Integer> entry) {
         return size() > MAX_SIZE;
     }
 
@@ -42,9 +45,11 @@ class LRUCache extends  LinkedHashMap {
         return (Integer)getOrDefault(key, -1);
     }
 
+    /*
     public void put(int key, int value) {
         super.put(key, value);
     }
+    */
 }
 
 /**

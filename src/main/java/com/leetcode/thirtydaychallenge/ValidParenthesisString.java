@@ -1,4 +1,4 @@
-package com.leetcode.thirtdaychallenge;
+package com.leetcode.thirtydaychallenge;
 
 import java.util.Stack;
 
@@ -27,7 +27,7 @@ The string size will be in the range [1, 100].
 
 class ValidParenthesisString {
     public boolean solution(String s) {
-        Stack<Integer> openBracesStack = new Stack<>();
+        Stack<Integer> openBracesStack = new Stack<>();//TODO: Replace the synchronized class "Stack" by an unsynchronized one such as "Deque
         Stack<Integer> starStack = new Stack<>();
 
         int i = 0;

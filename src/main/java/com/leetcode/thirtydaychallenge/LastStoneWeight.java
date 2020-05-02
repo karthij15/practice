@@ -1,5 +1,8 @@
 package com.leetcode.thirtydaychallenge;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 /*
 We have a collection of stones, each stone has a positive integer weight.
 
