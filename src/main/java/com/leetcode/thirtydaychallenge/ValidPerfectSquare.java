@@ -72,6 +72,12 @@ class ValidPerfectSquare {
         return false;
     }
     
+    /*
+    nex_X = X - [(X^2 -n)/(2*X)]
+    
+    same can be used for cube root and so on
+    nex_X = X - [(X^3 -n)/(3*X^2)]
+    */
     boolean newtonMethod(int num) {
         long x = num;
         
